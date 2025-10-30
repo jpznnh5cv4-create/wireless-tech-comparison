@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无线技术对比表</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            color: #2E86AB;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #2E86AB;
+        }
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: white;
+        }
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e9f5ff;
+            transition: background-color 0.3s ease;
+        }
+        .tech-highlight {
+            background-color: #e3f2fd !important;
+            font-weight: bold;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>无线技术对比表</h1>
+        
+        <div class="intro">
+            全面对比Wi-Fi、星闪、蓝牙、Zigbee等主流无线技术的性能参数与应用场景
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>技术</th>
+                        <th>最新标准/版本</th>
+                        <th>频段</th>
+                        <th>传输速率</th>
+                        <th>传输距离</th>
+                        <th>功耗特性</th>
+                        <th>网络拓扑</th>
+                        <th>主要优势</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tech-highlight">
+                        <td>Wi-Fi</td>
+                        <td>Wi-Fi 7 (802.11be)</td>
+                        <td>2.4/5/6GHz</td>
+                        <td>最高可达 46 Gbps</td>
+                        <td>几十米到一百多米</td>
+                        <td>高</td>
+                        <td>星型、Mesh</td>
+                        <td>高速率、大带宽、MLO多重连接</td>
+                    </tr>
+                    <tr class="tech-highlight">
+                        <td>星闪 (NearLink)</td>
+                        <td>星闪 1.0 (SLE/SLB)</td>
+                        <td>2.4GHz/Sub-GHz</td>
+                        <td>SLB: 1.2 Gbps; SLE: 12 Mbps</td>
+                        <td>几十米</td>
+                        <td>低 (SLE) 到 中高 (SLB)</td>
+                        <td>星型、Mesh</td>
+                        <td>超低时延 (≤20μs)、高可靠性</td>
+                    </tr>
+                    <tr>
+                        <td>蓝牙</td>
+                        <td>蓝牙 5.3/环境物联网</td>
+                        <td>2.4GHz ISM</td>
+                        <td>最高 2 Mbps (BLE)</td>
+                        <td>10米到几百米</td>
+                        <td>极低 (BLE/环境物联网)</td>
+                        <td>点对点、广播、Mesh</td>
+                        <td>低功耗、设备互联</td>
+                    </tr>
+                    <tr>
+                        <td>Zigbee</td>
+                        <td>Zigbee PRO 2023</td>
+                        <td>2.4GHz, 800/900MHz</td>
+                        <td>最高 250 kbps</td>
+                        <td>10米到100米</td>
+                        <td>极低</td>
+                        <td>Mesh 网状网</td>
+                        <td>极低功耗、大规模网络</td>
+                    </tr>
+                    <tr>
+                        <td>NB-IoT</td>
+                        <td>3GPP R16 / Cat-NB2</td>
+                        <td>运营商授权频段</td>
+                        <td>约几十到几百 kbps</td>
+                        <td>几公里到十几公里</td>
+                        <td>极低 (PSM/eDRX模式)</td>
+                        <td>星型 (通过基站)</td>
+                        <td>广覆盖、海量连接</td>
+                    </tr>
+                    <tr>
+                        <td>LoRa</td>
+                        <td>LoRaWAN 标准</td>
+                        <td>免授权 Sub-GHz</td>
+                        <td>几百 bps 到几十 kbps</td>
+                        <td>几公里到几十公里</td>
+                        <td>极低</td>
+                        <td>星型 (通过网关)</td>
+                        <td>超远距离、低成本部署</td>
+                    </tr>
+                    <tr>
+                        <td>NFC</td>
+                        <td>NFC Release 15 (WLC 2.0)</td>
+                        <td>13.56MHz</td>
+                        <td>最高 424 kbps</td>
+                        <td>0 cm - 2 cm</td>
+                        <td>无源/极低</td>
+                        <td>点对点、读写器/卡模拟</td>
+                        <td>触碰式交互、便捷支付</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 无线技术对比表 | GitHub Pages 部署 | 扫码访问</p>
+        </div>
+    </div>
+</body>
+</html>
